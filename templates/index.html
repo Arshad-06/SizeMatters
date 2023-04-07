@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Size Matters</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Image Compressor - Size Matters</h1>
+    </header>
+    <main>
+      <form action="/compress" method="POST" enctype="multipart/form-data">
+        <label for="file">Upload The Image To Be Compressed</label>
+        <input
+          type="file"
+          name="file"
+          id="file"
+          accept=".jpg,.jpeg,.png"
+          onchange="previewImage()"
+          required
+        />
+        <img id="preview" />
+        <button type="submit">Compress</button>
+      </form>
+    </main>
+    <footer>
+      <p>&copy; 2023 Size Matters</p>
+    </footer>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

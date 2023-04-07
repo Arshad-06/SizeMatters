@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Size Matters</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Image Compressor - Size Matters</h1>
+    </header>
+    <main>
+      <h2>Results:</h2>
+      <p>Compressed Image ({{og_size}} KB -> {{comp_size}} KB):</p>
+      <p>
+        <img src="static/uploads/compressed_image.png" />
+      </p>
+      <a href="/">Upload Another Image</a>
+    </main>
+    <footer>
+      <p>&copy; 2023 Size Matters</p>
+    </footer>
+  </body>
+</html>
